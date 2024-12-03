@@ -18,12 +18,21 @@ namespace TrilhaApiDesafio.Controllers
         [HttpGet("{id}")]
         public IActionResult ObterPorId(int id)
         {
+<<<<<<< Updated upstream
             // TODO: Buscar o Id no banco utilizando o EF
             var tarefa = _context.Tarefas.Find(id);
             
             if(tarefa == null)
             return NotFound();
             
+=======
+           
+           var tarefa = _context.Tarefas.Find(id);
+           
+           if(tarefa == null)
+           return NotFound();
+           
+>>>>>>> Stashed changes
             return Ok(tarefa);
         }
 
